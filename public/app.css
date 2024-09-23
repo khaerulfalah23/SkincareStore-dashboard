@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    background-color: rgba(0, 0, 0, 0.04);
+    height: 100vh;
+    font-family: Poppins, "Segoe UI";
+    font-size: 15px;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: deeppink;
+}
+
+label {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input,
+textarea,
+select {
+    margin-top: 5px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    &:focus {
+        outline: 2px solid deeppink;
+    }
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.wrap {
+    max-width: 90%;
+    width: 1000px;
+    margin: auto;
+}
+
+nav {
+    margin: 1rem auto 0 auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    gap: 1rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: auto;
+    max-width: 80%;
+
+    a:not(:last-of-type) {
+        color: rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    a.active {
+        background-color: black;
+        color: white;
+    }
+
+    a:last-of-type {
+        display: grid;
+        place-items: center;
+    }
+}
+
+.table-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15);
+    overflow: auto;
+}
+
+table {
+    min-width: 500px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+
+    thead {
+        background-color: deeppink;
+        color: white;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    tbody tr:not(:last-of-type) {
+        border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    a,
+    button {
+        cursor: pointer;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        text-decoration: none;
+        background-color: steelblue;
+        color: white;
+        border-radius: 50px;
+    }
+
+    .type,
+    .roles {
+        padding: 0.2rem 0.4rem;
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 50px;
+        font-size: 0.8rem;
+    }
+
+    .ON_DELIVERY {
+        padding: 0.1rem 0.4rem;
+        background-color: rgb(255, 247, 173);
+        color: rgb(214, 187, 34);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .DELIVERED {
+        padding: 0.1rem 0.4rem;
+        background-color: rgb(204, 255, 198);
+        color: rgb(45, 218, 23);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .CANCELLED {
+        padding: 0.1rem 0.4rem;
+        background-color: rgb(255, 193, 193);
+        color: rgb(253, 57, 57);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
+
+form .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.errors {
+    background-color: crimson;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+
+    ul {
+        padding: 0 2rem 0 3rem;
+    }
+}
+
+.success {
+    padding: 1rem 2rem;
+    background-color: limegreen;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.transaction {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+
+    article {
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        min-height: 100px;
+        height: fit-content;
+        width: 400px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .status p {
+        padding: 0.75rem;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+
+        &.ON_DELIVERY {
+            background-color: rgb(255, 247, 173);
+            color: rgb(214, 187, 34);
+        }
+
+        &.DELIVERED {
+            background-color: rgb(204, 255, 198);
+            color: rgb(45, 218, 23);
+        }
+
+        &.CANCELLED {
+            background-color: crimson;
+            color: white;
+        }
+    }
+
+    .product img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 5px;
+    }
+
+    .pembeli img {
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+    }
+
+    .detail {
+        margin-bottom: 8px;
+
+        p:first-child {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        p:last-child {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+}
